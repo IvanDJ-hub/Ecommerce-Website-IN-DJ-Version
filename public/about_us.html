@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <title>Електрическо Удобство</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/drop-down_menu.css">
+    <link rel="stylesheet" href="css/about_us.css">
+    <link rel="stylesheet" href="css/old_site.css">
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="#" class="logo"><span>Е</span>лектрическо <span>Удобство</span></a>
+            <!-- NavBar -->
+            <div class="navbar">
+                <a href="index.html">
+                    <h3>Начало</h3>
+                </a>
+                <a href="#">
+                    <h3>Продукти</h3>
+                </a>
+                <div class="dropdown">
+                    <h3 onclick="toggleDropdown()" class="ddm_h3">Категории <i class='bx bx-chevron-down'></i>
+                    </h3>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="#">Телефони</a>
+                        <a href="#">Компютри и периферия</a>
+                        <a href="#">Камери</a>
+                        <a href="#">Хладилници</a>
+                        <a href="#">Климатици</a>
+                    </div>
+                </div>
+                <a href="about_us.html">
+                    <h3>За нас</h3>
+                </a>
+            </div>
+            <!--Cart Icon-->
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <!--cart-->
+            <div class="cart">
+                <h2 class="cart-title">Твоята кошница</h2>
+                <!--Content-->
+                <div class="cart-content"></div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Обща сума</div>
+                    <div class="total-price">0лв</div>
+                </div>
+                <!--Buy Button-->
+                <button type="button" class="btn-buy">Плати сега</button>
+                <!--Close Cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- About us -->
+    <div class="container" id="about">
+        <h3>За нас</h3>
+        <hr>
+        <p> Добре дошли в Електрическо Удобство – вашият надежден партньор за иновации и решения в сферата на
+            електрическите уреди и оборудване. Ние сме екип от професионалисти, които се стремят да предоставят на
+            нашите клиенти най-доброто в света на електрическите технологии, с акцент върху качеството, ефективността и
+            иновациите.
+            <br>
+            Нашата мисия е да направим живота ви по-лесен и по-удобен, като ви предоставим разнообразие от
+            висококачествени електрически уреди и аксесоари, които да отговорят на вашите нужди и предпочитания. Ние
+            вярваме, че модерните технологии трябва да бъдат достъпни и лесни за използване, затова сме събрали в нашия
+            магазин само най-добрите продукти от водещи производители.
+            <br><br>
+            <span>Какво ни отличава?</span>
+            <br><br>
+            <span>Качество и надеждност</span> : Стремим се да предлагаме само продукти, които преминават през строг
+            контрол на
+            качеството, за да осигурим на клиентите си дълготрайни и ефективни решения.
+            <br><br>
+            <span>Индивидуален подход</span> : Следим за нуждите и желанията на всеки клиент и предлагаме
+            персонализирани съвети и
+            решения.
+            <br><br>
+            <span>Конкурентни цени</span> : Съчетаваме качеството с достъпни цени, за да осигурим най-доброто
+            съотношение
+            цена-качество.
+            <br><br>
+            <span>Професионално обслужване</span> : Нашият екип от специалисти е винаги на разположение, за да отговори
+            на вашите
+            въпроси и да ви помогне в избора на най-подходящия продукт за вас.
+            <br><br>
+            Ние сме тук, за да направим вашия дом и офис по-смарт и по-комфортен. Благодарим ви,
+            че избрахте нас, и се надяваме да ви предоставим изключително обслужване и продукти, които да надминат
+            вашите очаквания.
+            <br><br>
+
+            Свържете се с нас за всякакви въпроси или нужда от помощ. Очакваме с нетърпение да работим с вас и да ви
+            предложим най-доброто в света на електрическите уреди!
+        </p>
+        <hr>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-5 py-3 py-md-0">
+                <div class="card">
+                    <img src="./imgs/picture_1.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-7 py-3 py-md-0">
+                <p>Ние в Електрическо Удобство се ангажираме да осигурим, че нашите клиенти получават не само продукти
+                    от най-висок клас, но и изключително обслужване. <br><br>
+                    Всеки артикул в нашия асортимент е избран с грижа и внимание, за да отговори на най-високите
+                    стандарти и да удовлетворява вашите нужди. <br><br>
+                    Разгледайте нашата колекция и се уверете сами в качеството на нашите предложения. Ние сме тук, за да
+                    ви помогнем да намерите идеалното решение за вашия дом или бизнес.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- About us -->
+
+    <!-- Offer Section -->
+    <div class="container" id="offer">
+        <div class="row">
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Безплатна доставка</h3>
+                <p>На поръчки над 300 лв</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>Безплатно връщане</h3>
+                <p>В период от 30 дни</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-truck"></i>
+                <h3>Бързи доставки</h3>
+                <p>По целия свят</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <h3>Голям набор</h3>
+                <p>От продукти</p>
+            </div>
+        </div>
+    </div>
+    <!-- Offer Section -->
+
+    <!-- Newsletter Section -->
+    <div class="container" id="newslater">
+        <h3 class="text-center">Абонирайте се за нашите специални оферти.</h3>
+        <div class="input text-center">
+            <input type="text" placeholder="Enter Your Email...">
+            <button id="subscribe">Абониране</button>
+        </div>
+    </div>
+    <!-- Newsletter Section -->
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Електрическо Удобство</h3>
+                        <p>
+                            гр. Пловдив <br>
+                            бул. Санкт Петербур <br>
+                            България <br>
+                        </p>
+                        <strong>Phone:</strong> 076/ 686 220 <br>
+                        <strong>Email:</strong> electroniccomfort@gmail.com <br>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Usefull Links</h4>
+                        <ul>
+                            <li><a href="index.html">Начало</a></li>
+                            <li><a href="about_us.html">За нас</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="#">Terms of service</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Нашите социални мрежи</h4>
+                        <p>Може да ни последвате в социалните ни мрежи за допълнителни събития.</p>
+                        <div class="social-links mt-3"> <!-- Fixed class name -->
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Електрическо Удобство</span></strong>. Всички права са запазени
+            </div>
+            <div class="credits">
+                Designed by <a href="about_me.html">Ivan Dzhadzhev</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section -->
+
+
+    <script src="js/drop-down_menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/subscribe.js"></script>
+</body>
+
+</html>

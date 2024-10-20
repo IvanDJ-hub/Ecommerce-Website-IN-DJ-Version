@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <title>Електрическо Удобство</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/drop-down_menu.css">
+    <link rel="stylesheet" href="css/old_site.css">
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="#" class="logo"><span>Е</span>лектрическо <span>Удобство</span></a>
+            <!-- NavBar -->
+            <div class="navbar">
+                <a href="index.html">
+                    <h3>Начало</h3>
+                </a>
+                <a href="#">
+                    <h3>Продукти</h3>
+                </a>
+                <div class="dropdown">
+                    <h3 onclick="toggleDropdown()" class="ddm_h3">Категории <i class='bx bx-chevron-down'></i>
+                    </h3>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="#">Телефони</a>
+                        <a href="#">Компютри и периферия</a>
+                        <a href="#">Камери</a>
+                        <a href="#">Хладилници</a>
+                        <a href="#">Климатици</a>
+                    </div>
+                </div>
+                <a href="about_us.html">
+                    <h3>За нас</h3>
+                </a>
+            </div>
+            <!--Cart Icon-->
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <!--cart-->
+            <div class="cart">
+                <h2 class="cart-title">Твоята кошница</h2>
+                <!--Content-->
+                <div class="cart-content"></div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Обща сума</div>
+                    <div class="total-price">0лв</div>
+                </div>
+                <!--Buy Button-->
+                <button type="button" class="btn-buy">Плати сега</button>
+                <!--Close Cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products -->
+    <section class="shop container">
+        <h2 class="section-title">Продукти в магазина</h2>
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <!-- Box 1 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimCBKbIGpqswe5aSGoiNimaQLlREjxPKau4J3heiWOYb0ZJepQC_fZrIvh4Gx9UzelgcvuiD_BOc2Nap3mBgOeX7Q0YQc7krZg7AwzdXOBE_zl3f3ALQFzCFzHsuyoU_5vXlXdOslR1WanuUzKkC1Peh9TNcl7DplUMbJh-sxrMG2mv_UmYEvockT3Re0/s1600/1.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Домакински електроуреди</h2>
+            </div>
+            <!-- Box 2 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnepnXUhIbx0i9P2P3GniVC8OFD3i4c59NxcMjW3yFgm38jHF7rxjjg_NPihKbPtrZIiUiqwzr80XPLQ4x5hn82BQaICkwlSQ07Oc3-izMevOpSIdLUx9j78rYucVqMwsk3aR-l4jPuEXBShuw5-FuBAO_VXLCgM1_8lrTYJI5Hj43VRhpwxyuC3HsWsA/s320/2.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Компютри</h2>
+            </div>
+            <!-- Box 3 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSCPs7y4ouVUZL8tJ2Zbgxn7B_DfUl0d1gdnjC-eOO12e6AeX3sMbSfD7GSC0fyYREh35tqKErZnxJowJNqvmXOEli6wkXTefqZrxXY-dKQj6qUiJBCoaDn_Ppc7Sf6vbKevQ1cg3JyFEr985t8M5dD8ZJQc0Oz8um5RxqXS7lYVVWXc3XD96mO9DOOmo/s320/3.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Периферия</h2>
+            </div>
+            <!-- Box 4 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEit6X5KlTrYs2EDyPzWVDmus7aSbK2R3XBPe2GosF-8G2w3HiqebxC_oDWUnFJv5BnaQ60RrTsyE5o8AsK17TSRtedYSCpwHTokvBRWuEnoRdr9KOcUu72Npk63CMvy9Dvt5vOwxh87vADgPU923GbkqkepmEogfLiI7lvLvQ2Mycic3bADyEsA7jobXeo/s320/4.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Монитори и стойки</h2>
+            </div>
+            <!-- Box 5 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNWGBKGWfuyO6IdQuxRPPh5LJJN-Ndhsat2rPJSefTEUVFQmpIi_72e5TxIURmO88bvDde6GLXyP6ohyphenhyphenTiqbxoJFfK4lD0LBMdykgpKRMnc3vaYOIRWNXT3HwhordGItDug-ExETg6fCDsYmzqCRLUguu0pOYp0ntZnA594DH8ZgRjYKxyv3oxOT3qrRE/s320/5.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Столове и бюра</h2>
+            </div>
+            <!-- Box 6 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgK3Q6_s2xUcmOiSt2XhUaVTckgVNA6mkEqHKlOzeVaAYFgDX54AL-HReb374E12UfPyT08Lj6z4yC716I2HuE73PjklhB8OqXvIO8Fv0GMUyebEgioghj7viTG8ADuc1mj9WNrNKeeCwgAWdbPX014f_27QAhD_lZPPhG7ebQWGStkyLLHCtN_4UhiFfI/s320/6.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Телефони и таблети</h2>
+            </div>
+    </section>
+
+    <!-- Offer Section -->
+    <div class="container" id="offer">
+        <div class="row">
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Безплатна доставка</h3>
+                <p>На поръчки над 300 лв</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>Безплатно връщане</h3>
+                <p>В период от 30 дни</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-truck"></i>
+                <h3>Бързи доставки</h3>
+                <p>По целия свят</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <h3>Голям набор</h3>
+                <p>От продукти</p>
+            </div>
+        </div>
+    </div>
+    <!-- Offer Section -->
+
+    <!-- Newsletter Section -->
+    <div class="container" id="newslater">
+        <h3 class="text-center">Абонирайте се за нашите специални оферти.</h3>
+        <div class="input text-center">
+            <input type="text" id="emailInput" placeholder="Enter Your Email...">
+            <button id="subscribe">Абониране</button>
+        </div>
+    </div>
+    <!-- Newsletter Section -->
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Електрическо Удобство</h3>
+                        <p>
+                            гр. Пловдив <br>
+                            бул. Санкт Петербур <br>
+                            България <br>
+                        </p>
+                        <strong>Phone:</strong> 076/ 686 220 <br>
+                        <strong>Email:</strong> electroniccomfort@gmail.com <br>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Usefull Links</h4>
+                        <ul>
+                            <li><a href="index.html">Начало</a></li>
+                            <li><a href="about_us.html">За нас</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="#">Terms of service</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Нашите социални мрежи</h4>
+                        <p>Може да ни последвате в социалните ни мрежи за допълнителни събития.</p>
+                        <div class="social-links mt-3"> <!-- Fixed class name -->
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Електрическо Удобство</span></strong>. Всички права са запазени
+            </div>
+            <div class="credits">
+                Designed by <a href="about_me.html">Ivan Dzhadzhev</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section -->
+
+
+    <script src="js/drop-down_menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/subscribe.js"></script>
+</body>
+
+</html>

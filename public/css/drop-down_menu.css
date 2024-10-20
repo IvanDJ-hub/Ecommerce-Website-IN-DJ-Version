@@ -1,0 +1,108 @@
+/* Basic container for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #272737;
+    margin-top: 30px;
+    /* Make the background transparent */
+    min-width: 160px;
+    box-shadow: none;
+    /* Remove the box-shadow */
+    border: none;
+    /* Ensure there's no border */
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Style for the icon */
+.dropdown i {
+    margin-left: 8px;
+    /* Space between text and icon */
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #29293a;
+    color: #cfcfcf;
+    transition: 0.5s;
+}
+
+/* h2 element styling to act like a button */
+.ddm_h3 {
+    color: #fff;
+    cursor: pointer;
+    /* Align text and icon */
+    align-items: center;
+    /* Center icon vertically */
+    justify-content: space-between;
+}
+
+h3 {
+    margin: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* Making Responsive Resolution */
+@media (max-width: 1080px) {
+    .dropdown-content {
+        min-width: 140px; /* Adjust dropdown width for mid-range devices */
+    }
+
+    .dropdown-content a {
+        padding: 10px 14px; /* Adjust padding for smaller screens */
+    }
+
+    h3 {
+        font-size: 1rem; /* Smaller font size for headings */
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown-content {
+        min-width: 120px; /* Further reduce dropdown width */
+    }
+
+    .dropdown-content a {
+        padding: 8px 12px; /* Decrease padding for smaller devices */
+    }
+
+    h3 {
+        font-size: 0.9rem; /* Further reduce font size */
+        display: block; /* Stack h3 elements vertically */
+        margin: 10px 0; /* Adjust margin for stacking */
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-content {
+        min-width: 100%; /* Full width on very small screens */
+    }
+
+    h3 {
+        font-size: 0.8rem; /* Further reduce font size */
+        margin: 5px 0; /* Adjust margin for smaller screens */
+    }
+
+    .dropdown-content a {
+        padding: 6px 10px; /* Smaller padding for links */
+    }
+}

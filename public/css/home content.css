@@ -1,0 +1,88 @@
+/* home content */
+.home {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 20px; /* Add padding to create space inside the home content */
+    margin-bottom: 75px;
+    margin-top: 50px;
+}
+
+.home .img{
+    flex: 1 1 300px;
+}
+.home .img img{
+    margin-top: 30px;
+    width: 100%;
+}
+.home .content{
+    flex: 1 1 400px;
+    margin-top: 20px;
+}
+.content h1{
+    color: #02ac70;
+    font-weight: bold;
+    margin-left: 23px;
+    font-size: 55px;
+    text-shadow: -1px 1px 1px black;
+}
+.content h1 span{
+    color: #02ac70;
+    text-shadow: 1px 1px 1px black;
+}
+#span2{
+    color: #ffc800;
+}
+.content p{
+    margin-left: 23px;
+}
+.btn{
+    margin-left: 13px;
+    margin-top: 15px;
+}
+.btn button{
+    width: 150px;
+    height: 32px;
+    letter-spacing: 3px;
+    background-color: rgb(67 0 86);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn button:hover{
+    background-color: #ffc800;
+    color: black;
+    border: none;
+}
+@media screen and (max-width:1200px){
+    .home{
+        height: 90vh;
+    }
+}
+@media screen and (max-width:799px){
+    .home{
+        height: 140vh;
+    }
+}
+@media screen and (max-width:550px){
+    .home{
+        height: 110vh;
+    }
+}
+@media screen and (max-width:420px){
+   .content h1{
+    font-size: 45px;
+   }
+}
+@media screen and (max-width:320px){
+   .content h1{
+    font-size: 36px;
+   }
+}
+/* home content */

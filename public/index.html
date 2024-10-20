@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <title>Електрическо Удобство</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/drop-down_menu.css">
+    <link rel="stylesheet" href="css/home content.css">
+    <link rel="stylesheet" href="css/old_site.css">
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="#" class="logo"><span>Е</span>лектрическо <span>Удобство</span></a>
+            <!-- NavBar -->
+            <div class="navbar">
+                <a href="index.html">
+                    <h3>Начало</h3>
+                </a>
+                <a href="Products.html">
+                    <h3>Продукти</h3>
+                </a>
+                <div class="dropdown">
+                    <h3 onclick="toggleDropdown()" class="ddm_h3">Категории <i class='bx bx-chevron-down'></i>
+                    </h3>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="#">Телефони</a>
+                        <a href="#">Компютри и периферия</a>
+                        <a href="#">Камери</a>
+                        <a href="#">Хладилници</a>
+                        <a href="#">Климатици</a>
+                    </div>
+                </div>
+                <a href="about_us.html">
+                    <h3>За нас</h3>
+                </a>
+            </div>
+            <!--Cart Icon-->
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <!--cart-->
+            <div class="cart">
+                <h2 class="cart-title">Твоята кошница</h2>
+                <!--Content-->
+                <div class="cart-content"></div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Обща сума</div>
+                    <div class="total-price">0лв</div>
+                </div>
+                <!--Buy Button-->
+                <button type="button" class="btn-buy">Плати сега</button>
+                <!--Close Cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- home content -->
+    <section class="home">
+        <div class="content">
+            <h1> <span>Електрически Продукти</span>
+                <br>
+                До <span id="span2">50%</span> намаление
+            </h1>
+            <p>Само сега най-добрите оферти на пазара.
+                <br>При всеки закупен продукт ще получиш код с отстъпка при следващо закупуване.
+            </p>
+            <div class="btn"><button>Пазарувай</button></div>
+
+        </div>
+        <div class="img">
+            <img src="./imgs/background.png" alt="">
+        </div>
+    </section>
+    <!-- home content -->
+
+    <!-- Products -->
+    <section class="shop container">
+        <h2 class="section-title">Продукти за пазаруване</h2>
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <!-- Box 1 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyKXJwMG-wW-ASjsCWbl7WxSS1JA0sV_LXZ3FsM80YMERU_yEZbaXnkP3Z8RHDtBoYVE6b5txW6WeGShy5Am0FASo2bGgKFqqCvM8WDWcaowS34wpLIP_K__4KC_6rf9FZHL5lAzxvSyluTzDJPGze9Jy5nq4ZxPztyLlzIVDqprMuHqPxjCLE4CFdZF8/s1600/1.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Пералня GORENJE 6.0 kg, 1000 об/min</h2>
+                <span class="price">$130</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 2 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4xFU7KGBXgs5OtCjM3Y6sALzCgYhfXlP3EWmRqXFAJjqEnqBEpzVJxI5pv26WLqEqMn127nQUQSexeWi2ur-wAY_7eQtWD-iR3088fl9jiTUDSac0GUqCahH6pjRHHAGoVAnAHa04jg_ubCn45423DL7FVxe1j8QX6VMkJGYF_1cwS5LXba_eBeGNPhM/s1600/2.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Пералня BEKO 6.0 kg, 1000 об/min</h2>
+                <span class="price">$240.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 3 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3ZNh301YluXPMdU68e2qBKF_dw1BwsCn5IJ2kckM4rdPNbeASxLh-8U2BZE0qKvcnkhS_squTzM1Ws8ihEaQ70BE9lnVSs4fMoIO43tzoPrwRwVu92y0baRerjgIEEyxSBhtaFOO7GE1X0WVJg2b6-EyvBRyu1UTtCkaCvjyK0ldpTbs9ZPdthI2LxnQ/s1600/3.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Пералня TELEFUNKEN 6.0 kg, 1000 об/min</h2>
+                <span class="price">$329.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 4 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSWWpRnSxKlvGIDtTsgP3sZB_TT4vyyu5pH6Jy4eLEXECzzsJCos3EoaTjxme9j_J7ivwxvBZKJlRl97SlFZnMncGkOR_0f043secNzb7n-_Sz8QL_SlPfu6HJh2jM6NzKBRjDyrs1noL1PGGLO5yjZsjhAPCAL_TZ15JtppHnfhhFzh5Wve1-Vrb0DkM/s1600/4.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Пералня BEKO 6.0 kg, 1200 об/min</h2>
+                <span class="price">$479.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 5 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi52T6tfN_pSqoPrxsVaab8fjw602Gmm9_ORZ6hzDalRo0DXbFKxdrvJLwWKZHeuEUFcsiL09rbQxL-jlM4hPiNmV-7zK3g_XnauzgWb0kijKLSn2E8BSqCI2pDwD6cM6bfcqsjaSMlYbV8Ge4LSgoJTDzXDUra54vdgqUtX1ikQT9bTkS6UQTJY3-2ZJY/s1600/1.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Газова печка BEKO FSG</h2>
+                <span class="price">$230.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 6 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPs1RJn94ZZXIMmwJTaBolatp6l8Su8-qJmwLHv9tBupt-HqNVtRE44OX4Pv7qzhzLzgoUl3MV7_dl1oTAN0eVtNmLGVCg3eZoh9BlRh_vpCkEmdvqjwUFk-SUAmAbAEA1-expFRiIoO7q48DMHr_Y4RM70E5Ar9yzK9voSbfeT3nv9pY252K9Gn_-K4M/s1600/2.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Газова печка ELECTROLUX</h2>
+                <span class="price">$300</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 7 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjL_B15onNkpiqMRt5COj4-DuGHnUMI4YwDOWTO6Jo9q_weePfX-qABambXRpijvfCRFWj5iM4mifvqsAhVgK9WTcJCRPTHY5s07Cqg4H2A5hkR960WO7uikpixS0z7j7gB4-8MI74WZhdK-h6NwqeJX7TZVpiuxFcRbMqqkA-tNxVku64DJD0EWF5jGK4/s1600/3.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Газова печка ELECTROLUX</h2>
+                <span class="price">$300</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 8 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBP3HGRU1xBIoOsDbFz-xQ5LVnsdnRyhIPnjfN3Y2st9jTcXvWN8pMLN66ihuRMAuq0fIUCSR30O3_MZZMoM7eBCRk1-a5lGFfgQe99p4sc-JcMZt3iTmk1z3JZiDKlE87PyeOzHc6nPnQvXFBnVOWdnI3p6uKx-M8CguyYUODm7Y6kUYQJflgm5HemwM/s1600/4.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Газова печка BOSCH HXN39AD50</h2>
+                <span class="price">$699.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 9 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNKS29ysvQZuokFLEqTwnlzAGviGS2xQnSC4EZOA0JatZmTeWSny9cpVCFo8aFG2FbYiC-I7rYAbt4FGZUtL62LC8emMt23G1bCSAyxilGyVwQzS7itdPGM5JRfPZ_CBH5XC0hOKHYlbUpCV9C9KD8P5w0soXEPihtfMUvILej1imuF00HXv3WngY2KpY/s1600/1.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Хладилник с долен фризер GORENJE</h2>
+                <span class="price">$219.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 10 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW_PmxOIoAbtgPx9EbG01WzE8H_6hBXaG_nzhrpuGSHKQA0oReaAMNZQ3Puaru64qHYNQzNJS2n2DeviGjJF-azvVQQSm3nqhuc7Qyo5c6sI1MZ2DqnoUKcZjqYu_Vj3-4Vm4wKkwRMhyphenhyphenjLNuVxyrWwZmMfThxoxL66NBpBCAwG65AIeNKz6T8aRtfre8/s1600/2.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Хладилник с долен фризер TELEFUNKEN</h2>
+                <span class="price">$269.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 11 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB-2z1ETvMO7X-fMiFUXZ-gEKD_VQEIlH4RaLI1jgYPQnCt6pWzrY_DHJzw8fNERU3bgLJiehe-vG3wxjdeYEA8d-Q1bDIylw2wRi4j3oW2LCY3cxAurPyrdPmrZLTmLyvnsDKKZbg1diryIq7sLjqhC0HJYAlqVo5SIgC_qbr4o704_6K8MWzYgEOOGA/s1600/3.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Хладилник с долен фризер GORENJE </h2>
+                <span class="price">$299.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 12 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDZV1SrWxG_21sW56TC1bf7HYE5wFp-mwJfO715XA6PKFGK7LBAYz7VliQnB0mCPV6iCYnLMqMo2z8iTDNhVAHlXcoTJ7EUw5-WnOwBKiRANC2G-NjCxbBdA8MrK0WBG9hg0ef17CnXGGwZWcRdaGDzda9WF3A0Ae3FHOVSTCBObIDbT9r0Yk6jjzBZ0s/s1600/4.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Хладилник с долен фризер VESTFROST </h2>
+                <span class="price">$300</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- home 2 -->
+    <section class="home">
+        <div class="content">
+            <h1> <span>Кухенски уреди и техника</span>
+                <br>
+                До <span id="span2">50%</span> намаление
+            </h1>
+            <p>Само сега най-добрите оферти на пазара.
+                <br>При всеки закупен продукт ще получиш код с отстъпка при следващо закупуване.
+            </p>
+            <div class="btn"><button>Пазарувай</button></div>
+
+        </div>
+        <div class="img">
+            <img src="./imgs/image.png" alt="">
+        </div>
+    </section>
+    <!-- home 2 -->
+
+    <!-- Products -->
+    <section class="shop container">
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <!-- Box 13 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhw2mqFw3ckLPepgDFzjl_myPDkffoaEya0muz0PO3fm23R9qNbZG1bvus7D0MLa7ryQuYSelS0WVr9X0nxsiid5rJYVYgEdDWV6tbDUedCQolFFjsk2PfHzzOhHUM9fyMvsyFC1og-1_SwpgqM2axYhMAT2b6JBNwPSL_CnvSkxVQ4dmyZerrV2AocrSQ/s320/1.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">CRUSHER X R5 GEFORCE RTX4060 EAGLE</h2>
+                <span class="price">$700</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 14 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWNV5G3PnlYgPXB5YouHyl-xuxqSVx_Oq-Tzj-oboQvTIsVJ4tBn4eaLafqQwqQRFzd2pHxA98vcpYIJxf6pF7uHxP1zO31-fHoe73zh2_W0AEygi-wsCC5OVGWowK_Tl73okL2sNLdWiEswXhUNVqoMraoi6Wl1hh1hiftqECm2u6akAH14Y4MK3XM90/s320/2.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">FIGHTER I5 GEFORCE RTX4060 ICE</h2>
+                <span class="price">$730</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 15 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiR3rrFXc1N-C9LmXeqz3gMoY0lBpIZjbVaeA5q-lB-XEr9EHItMhh26NBXDxZ30F8_83LrKXmIoCoAspB-R5zurt53QKmdgWWCS9CJ_T7ekGqK-0Ori0HRhjSUMBzp65Gb4UV70egcbZ9tQYsJ4M4vI4F62t0KQYn6gLXPGRPe3SzL7UMlHQHOgEc5XA8/s320/3.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">CRUSHER X R5 GEFORCE RTX4060TI WHITE</h2>
+                <span class="price">$750</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 16 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQc5JVeaTAdgMci859i7hBWU4foXL5K5kKkJVDWOteV6GLSmVNHfuc3C_jI3-i08bTdXkxmraFwW-KRzc4zfOjdDEAN1L0dt6YcQ4f9Xnj_n8Bz7ICZHJuqxjK5Jdv3ouMp8Ce3rC5ufEgKA2M3EQy9E4DJ2vKSAnErlLov38cZh_kAD7AEW8XG4z3Vd8/s320/4.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">CRUSHER R5 GEFORCE RTX4060TI</h2>
+                <span class="price">$800</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 17 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjq8MDwgZhGf5DXrnzPEX73Dcbcf5j-DY4_akc_W825JL7yKVua9FuL4zPFFftGJVy02wtRdNf5CntzJX1fuueV4ydEWref0adV6sYjw2JVblLuqOz75mj2kKoQ9Hb6JGWGo12BGMIQO_jvzkOep_8V8aUAaFoutZeii3qrvgvQ2ri9fkKGDZKSSvBt_mA/s320/1.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">HyperX Pulsefire Haste</h2>
+                <span class="price">$75</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 18 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEig-DH8Nxti_eI11BI7DzDJR7vttkdUgQHjsqlKNkARYmSKIh8g7K3KmvZdjvWM6-2wiyJNytEnmadF_NYRxCZ0HvaXfAtgROUC95WwnooRWwyeO2LNR8RQ3hQi59AVwE2QkCc9EtgSGfreg7dzV5HvQj656JaS3UHCxnAPiM12ZfjI8cNDoqQCyAKfSpI/s320/2.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Keychron M3</h2>
+                <span class="price">$85</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 19 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAhlwymBERI24H1bq3QOaG1Gm0WzPMO1eYOiVt94sij9yM-1seO7g7K-quP_MfdMehngDdtTvISX0qmxDXq1iavN4vZYx2yKcQ6-pOK1e1uWwk9jvgi39mPuMMFSl0Bk0acxVCLHwSm5sYwysBawuyddLxZMGENWw9VHq2rmviLbTDAeUYXIq2Ve5r9sA/s320/3.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Keychron M3 Mini</h2>
+                <span class="price">$85</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 20 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivoZLhu3z4gMeXrzhGZM2u6hc4zlnM9wbcJo8pixv-_vfTazsRKIUwhbn-ujMvIjMmWcNDsl9shyO_hFzQDLku9qAj3wmVxBA0XirzQtAYg3e8NcXorIlJzao2YC54wJe6f3MvzN4hs1nj9XXGFlJpPWL_v3Hzbu6ysL-ycYw9jy67wRIIsOLwUDZjYjY/s320/4.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">Keychron M2</h2>
+                <span class="price">$85</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 21 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitZ8wAgnY1ozf08XxCOpm_-P-L8ouwsIuEiZnhtwGEd4wcRoPAfdfRTKdDkp0C6Er3PWochL74GR4GJdoJxuQ8i_KHAsgC1mQFg5SSbY82o_ON3tq0hIFJ_1N3LersW9XedYomOaCKabUnuCxE632VKI7S9PCxp1jKIT72dj2WyJWLpXUkwb5q5YxujMc/s320/1.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">uRage Exodus 860 TKL</h2>
+                <span class="price">$50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 22 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg75B7oSEOco-fB9Zx75B-6ximKYoLussJ1H6WhnkrDVRDC1NMWIcD6dZ4N5ctnOG_Fio7KYHLfuh3T2NEF2TcXH6_RflMG3_wnLhgJBzB1RWa17uKeLqM0NnAUtp4neG-PLsx6MWM-H0hyphenhyphenZBHExBddLjsb1PtS2IaD5nZVQ_SmLlYhnkjE-JTxqimvczo/s320/2.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">uRage Exodus 860</h2>
+                <span class="price">$65</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 23 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhppblpFqOXqgM8RIEACLYVXpADHWNzPJHLUfGfGoVD0Gd7KMpsOqJYwaczSib83BOfpswvlbAQO-DATDmqfJre1TGB-ZOKHLTDB6tTjsPyX5mo1pzkMN56D4MEEQXH_2km8LOkMu2iMaSywzk6CvAWrKGDp6TfgS7tKUuREHm3YtZtA4pG9FvWiKF8nzU/s320/3.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">CHERRY G84-4100 Compact-Keyboard</h2>
+                <span class="price">$75</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 24 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0voauqyOZqx0aFdul6rTlJrKOTN2wbYIqhqP4MJzcKhSjYh1NpiFsURPsnaGcTsYGvAyHSPLSUW2pzG_yJKzxit1R5vGbAJWHuyROqNujLTUlxsNYZEyREkBfcethC1nfjaxgpn76aYX8fnt8CVZhUEAakpjSGg0xtkIdFqnerfc5F-8QNUgGcYL8xsg/s320/4.webp"
+                    alt="" class="product-img" />
+                <h2 class="product-title">SteelSeries Apex 3 TKL</h2>
+                <span class="price">$90</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <div class="container" id="offer">
+        <div class="row">
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Безплатна доставка</h3>
+                <p>На поръчки над 300 лв</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>Безплатно връщане</h3>
+                <p>В период от 30 дни</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-truck"></i>
+                <h3>Бързи доставки</h3>
+                <p>По целия свят</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <h3>Голям набор</h3>
+                <p>От продукти</p>
+            </div>
+        </div>
+    </div>
+    <!-- Offer Section -->
+
+    <!-- Newsletter Section -->
+    <div class="container" id="newslater">
+        <h3 class="text-center">Абонирайте се за нашите специални оферти.</h3>
+        <div class="input text-center">
+            <input type="text" id="emailInput" placeholder="Enter Your Email...">
+            <button id="subscribe">Абониране</button>
+        </div>
+    </div>
+    <!-- Newsletter Section -->
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Електрическо Удобство</h3>
+                        <p>
+                            гр. Пловдив <br>
+                            бул. Санкт Петербур <br>
+                            България <br>
+                        </p>
+                        <strong>Phone:</strong> 076/ 686 220 <br>
+                        <strong>Email:</strong> electroniccomfort@gmail.com <br>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Usefull Links</h4>
+                        <ul>
+                            <li><a href="index.html">Начало</a></li>
+                            <li><a href="about_us.html">За нас</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="#">Terms of service</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Нашите социални мрежи</h4>
+                        <p>Може да ни последвате в социалните ни мрежи за допълнителни събития.</p>
+                        <div class="social-links mt-3"> <!-- Fixed class name -->
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Електрическо Удобство</span></strong>. Всички права са запазени
+            </div>
+            <div class="credits">
+                Designed by <a href="about_me.html">Ivan Dzhadzhev</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section -->
+
+
+    <script src="js/drop-down_menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/subscribe.js"></script>
+</body>
+
+</html>

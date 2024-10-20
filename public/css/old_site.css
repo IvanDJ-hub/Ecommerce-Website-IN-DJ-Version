@@ -1,0 +1,326 @@
+/* Offer */
+#offer {
+    margin-top: 100px;
+    padding: 15px;
+    text-align: center;
+    /* Center text for better appearance */
+}
+
+#offer .row {
+    display: flex;
+    justify-content: space-around;
+    /* Ensure the items are spaced evenly */
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+}
+
+#offer .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the content horizontally */
+    text-align: center;
+}
+
+#offer i {
+    font-size: 32px;
+    color: #02ac70;
+    margin-bottom: 10px;
+    /* Space between icon and h3 */
+}
+
+#offer h3 {
+    margin-bottom: 10px;
+    /* Space between h3 and p */
+}
+
+#offer p {
+    margin-top: 0;
+    /* Adjust space between h3 and p */
+}
+
+
+/* Newslater */
+#newslater {
+    margin-top: 50px;
+    /* Reduced margin for better spacing */
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align the content */
+    text-align: center;
+    /* Center text for better appearance */
+}
+
+#newslater h3 {
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.input {
+    margin-top: 20px;
+    /* Adjust margin for consistency */
+    display: flex;
+    /* Use flex to align input and button */
+    justify-content: center;
+    /* Center align items */
+}
+
+.input input {
+    width: 350px;
+    height: 36px;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding-left: 5px;
+    margin-right: 10px;
+    /* Add space between input and button */
+}
+
+#subscribe {
+    width: 200px;
+    height: 36px;
+    border-radius: 3px;
+    border: none;
+    background-color: #02ac70;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px black;
+    cursor: pointer;
+}
+
+#subscribe:hover {
+    background-color: #0a7952;
+}
+
+/* Footer */
+#footer {
+    padding: 0 0 30px 0;
+    color: white;
+    font-size: 16px;
+    background-color: transparent;
+    margin-top: 100px;
+}
+
+#footer .footer-top {
+    padding: 40px 0 30px 0;
+    /* Adjust padding for balance */
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align items */
+}
+
+#footer .footer-top .footer-contact,
+#footer .footer-top .footer-links {
+    margin-bottom: 30px;
+    text-align: center;
+    /* Center align text */
+}
+
+#footer .footer-top .footer-contact h3,
+#footer .footer-top .footer-links h4 {
+    color: #ffc800;
+}
+
+#footer .footer-top .footer-contact h4 {
+    width: auto;
+    /* Allow h4 to fit content */
+    font-size: 22px;
+    margin: 0 0 20px 0;
+    /* Consistent margin */
+}
+
+#footer .footer-top .footer-links ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Use flex for list items */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align list items */
+    color: #02ac70;
+    /* Updated color */
+}
+
+#footer .footer-top .footer-links ul li {
+    padding: 5px 0;
+    /* Consistent padding */
+    display: inline-block;
+    /* Inline-block for horizontal spacing */
+}
+
+#footer .footer-top .footer-links ul li a {
+    color: #02ac70;
+    /* Updated color for list links */
+    text-decoration: none;
+}
+
+/* Ivan Djadjev link color and hover */
+#footer .credits a {
+    color: #02ac70;
+    /* Updated color for Ivan Djadjev */
+    text-decoration: none;
+}
+
+#footer .credits a:hover {
+    color: #107451;
+    /* Change hover color */
+}
+
+/* Social Media Icons */
+#footer .social-links a {
+    font-size: 15px;
+    /* Updated size for social media icons */
+    color: #fff;
+    margin-right: 10px;
+}
+
+
+#footer .social-links i {
+    font-size: 40px;
+}
+
+#footer .copyright,
+#footer .credits {
+    text-align: center;
+    /* Center align footer text */
+    margin-top: 20px;
+    /* Space between copyright and links */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+
+    #newslater h3,
+    #footer .footer-top h4 {
+        font-size: 20px;
+        /* Adjust font size */
+    }
+
+    #newslater .input input {
+        width: 80%;
+        /* Responsive width */
+    }
+
+    #subscribe {
+        width: 80%;
+        /* Responsive width */
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #footer .footer-top .footer-contact h4,
+    #footer .footer-top h4 {
+        font-size: 16px;
+        /* Adjust font size for small screens */
+    }
+
+    #footer .copyright,
+    #footer .credits {
+        font-size: 12px;
+        /* Adjust font size for small screens */
+    }
+}
+
+/* contact */
+#contact {
+    margin-top: 100px;
+}
+
+#contact .card {
+    height: auto;
+    /* Adjust height to fit content */
+    margin-top: 20px;
+    box-shadow: rgba(143, 143, 249, 0.363) 0px 1px 5px 0px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    /* More padding for better alignment */
+    font-size: 18px;
+    /* Increase text size */
+    word-wrap: break-word;
+    /* Ensure long words break to the next line */
+    overflow: hidden;
+    /* Prevent content from spilling out */
+}
+
+#contact .card i {
+    font-size: 16px;
+    /* Increase icon size */
+    color: #02ac70;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-right: 15px;
+    /* More space between icon and text */
+    margin-bottom: 5px;
+}
+
+#contact .card h6 {
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    /* Increase text size */
+    word-wrap: break-word;
+    /* Ensure text doesn't overflow */
+    overflow: hidden;
+    /* Prevent text overflow */
+    white-space: normal;
+    /* Ensure text wraps normally */
+}
+
+#contact .form-control {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
+    /* Increase input text size */
+    font-size: 16px;
+    /* White caret (cursor) color */
+    caret-color: #fff;
+    /* White text color when typing */
+    color: #fff;
+    background-color: transparent;
+}
+
+/* Placeholder color */
+#contact .form-control::placeholder {
+    color: #fff;
+    /* White color for placeholders */
+}
+
+#contact .form-control:hover {
+    box-shadow: 0 0 10px rgba(71, 219, 130, 0.7);
+    outline: none;
+}
+
+.submitBtn button {
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    /* Slightly larger button */
+    background: #02ac70;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    font-size: 16px;
+    /* Larger button text */
+}
+
+.submitBtn button:hover {
+    background-color: #0e6f4d;
+}
+
+.row>.col-md-4 {
+    display: inline-block;
+    width: 33%;
+}
