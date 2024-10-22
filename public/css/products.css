@@ -254,6 +254,7 @@ header {
     gap: 1.5rem;
 }
 
+
 .product-box {
     position: relative;
     background: #2d2e37;
@@ -287,6 +288,8 @@ header {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0.8rem;
+    text-decoration: none;
+    color: #fff;
 }
 
 .price {
