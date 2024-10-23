@@ -35,7 +35,7 @@ app.post("/stripe-checkout", async (req, res) => {
       console.log("unitAmount:", unitAmount);
       return {
         price_data: {
-          currency: "usd",
+          currency: "bgn",
           product_data: {
             name: item.title,
             images: [item.productImg],

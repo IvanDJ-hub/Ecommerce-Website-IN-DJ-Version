@@ -191,12 +191,48 @@ header {
     cursor: pointer;
 }
 
+.cart-content {
+    overflow-y: auto;
+    /* Enable vertical scroll bar */
+    overflow-x: hidden;
+    /* Hide horizontal scroll bar */
+    max-height: 400px;
+    /* Set a height limit for the cart to allow scrolling */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide the scroll bar background */
+::-webkit-scrollbar {
+    width: 5px; /* Scroll bar width */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+    background: transparent; /* Remove the background */
+}
+
+/* Scrollbar thumb (the scroll indicator) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color); /* Scroll indicator in white */
+    border-radius: 10px; /* Rounded edges for a smoother look */
+}
+
+/* Optional: add hover effect on the scroll thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text--color); /* Slightly different white when hovered */
+}
+
+
 .cart-box {
     display: grid;
     grid-template-columns: 32% 50% 18%;
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
+    padding-right: 50px;
 }
 
 .cart-img {
@@ -271,7 +307,10 @@ header {
 
 .product-box:hover .product-title,
 .product-box:hover .price,
-.product-box:hover .add-cart {
+.product-box:hover .add-cart,
+.product-box:hover .old-price,
+.product-box:hover .new-price,
+.product-box:hover .saled {
     color: #141414;
 }
 
@@ -291,6 +330,21 @@ header {
 
 .price {
     font-weight: 500;
+}
+
+.old-price {
+    font-weight: 500;
+    text-decoration: line-through;
+    color: var(--main--color);
+}
+
+.new-price {
+    font-weight: 500;
+    color: var(--text--color);
+}
+
+.saled {
+    color: #17a589;
 }
 
 .add-cart {
@@ -451,4 +505,28 @@ header {
         font-size: 1.2rem;
         /* Further decrease size */
     }
+}
+
+.terms{
+    color: var(--text--color);
+}
+
+.terms-text{
+    color: var(--main--color);
+    font-weight: 700;
+}
+.terms-p{
+    color: var(--bg-color);
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+
+.mail{
+    text-decoration: none;
+    color: inherit;
+}
+
+main{
+    text-align: center;
 }

@@ -2,21 +2,24 @@
 let cartIcon = document.querySelector('#cart-icon');
 let cart = document.querySelector('.cart');
 let closeCart = document.querySelector('#close-cart');
+
 // Open Cart
 cartIcon.onclick = () => {
     cart.classList.add("active");
 }
+
 // Close Cart
 closeCart.onclick = () => {
     cart.classList.remove("active");
 }
-// Making add to cart
+
 // Cart working JS
 if (document.readyState == "loading") {
     document.addEventListener("DOMContentLoaded", ready);
 } else {
     ready();
 }
+
 // Making Function
 function ready() {
     // Remove Item From Cart
@@ -66,11 +69,20 @@ function addCartClicked(event) {
     var shopProduct = button.parentElement;
     var title = shopProduct.getElementsByClassName("product-title")[0].innerText;
     var price = shopProduct.getElementsByClassName("price")[0].innerText;
+    price = price.replace("лв", "").trim(); // Remove лв sign and extra spaces
     var productImg = shopProduct.getElementsByClassName("product-img")[0].src;
     addProductToCart(title, price, productImg);
     updatetotal();
     saveCartItems();
     updateCartIcon();
+}
+
+// Add Scroll to Cart
+const cartContent = document.querySelector('.cart-content');
+
+// Scroll to bottom when an item is added
+function scrollToBottom() {
+    cartContent.scrollTop = cartContent.scrollHeight;
 }
 
 function addProductToCart(title, price, productImg) {
@@ -88,7 +100,7 @@ function addProductToCart(title, price, productImg) {
     <img src="${productImg}" alt="" class="cart-img">
         <div class="detail-box">
         <div class="cart-product-title">${title}</div>
-        <div class="cart-price">${price}</div>
+        <div class="cart-price">${price} лв</div> <!-- Display price with лв -->
             <input 
             type="number" 
             id="" 
@@ -98,13 +110,17 @@ function addProductToCart(title, price, productImg) {
             >
             <!-- Remove Item -->
         </div>
-        <i class='bx bx-trash-alt cart-remove' ></i>`
+        <i class='bx bx-trash-alt cart-remove' ></i>`;
     cartShopBox.innerHTML = cartBoxContent;
     cartItems.append(cartShopBox);
     cartShopBox.getElementsByClassName('cart-remove')[0]
         .addEventListener("click", removeCartItem);
     cartShopBox.getElementsByClassName('cart-quantity')[0]
         .addEventListener('change', quantityChanged);
+
+    // Scroll to bottom after adding the product
+    scrollToBottom();
+    
     saveCartItems();
     updateCartIcon();
 }
@@ -118,13 +134,13 @@ function updatetotal() {
         var cartBox = cartBoxes[i];
         var priceElement = cartBox.getElementsByClassName("cart-price")[0];
         var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
-        var price = parseFloat(priceElement.innerText.replace("$", ""));
+        var price = parseFloat(priceElement.innerText.replace("лв", "")); // Remove лв sign
         var quantity = quantityElement.value;
         total += price * quantity;
     }
     // If price contains some cents
     total = Math.round(total * 100) / 100;
-    document.getElementsByClassName("total-price")[0].innerText = '$' + total;
+    document.getElementsByClassName("total-price")[0].innerText = total + ' лв'; // Add лв sign
     // Save Total To LocalStorage
     localStorage.setItem("cartTotal", total);
 }
@@ -144,7 +160,7 @@ function saveCartItems() {
 
         var item = {
             title: titleElement.innerText,
-            price: priceElement.innerText,
+            price: priceElement.innerText.replace("лв", "").trim(), // Save price without лв sign
             quantity: quantityElement.value,
             productImg: productImg,
         };
@@ -172,7 +188,7 @@ function loadCartItems() {
     var cartTotal = localStorage.getItem("cartTotal");
     if (cartTotal) {
         document.getElementsByClassName("total-price")[0].innerText =
-            "$" + cartTotal;
+            cartTotal + ' лв'; // Add лв sign
     }
     updateCartIcon();
 }
