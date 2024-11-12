@@ -68,8 +68,11 @@ function addCartClicked(event) {
     var button = event.target;
     var shopProduct = button.parentElement;
     var title = shopProduct.getElementsByClassName("product-title")[0].innerText;
-    var price = shopProduct.getElementsByClassName("price")[0].innerText;
-    price = price.replace("лв", "").trim(); // Remove лв sign and extra spaces
+    
+    // Check if new price exists, otherwise use regular price
+    var priceElement = shopProduct.getElementsByClassName("new-price")[0] || shopProduct.getElementsByClassName("price")[0];
+    var price = priceElement.innerText.replace("лв", "").trim(); // Remove лв sign and extra spaces
+    
     var productImg = shopProduct.getElementsByClassName("product-img")[0].src;
     addProductToCart(title, price, productImg);
     updatetotal();

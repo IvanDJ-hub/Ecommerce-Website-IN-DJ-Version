@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <title>Електрическо Удобство</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/drop-down_menu.css">
+    <link rel="stylesheet" href="css/home content.css">
+    <link rel="stylesheet" href="css/old_site.css">
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="#" class="logo"><span>Е</span>лектрическо <span>Удобство</span></a>
+            <!-- NavBar -->
+            <div class="navbar">
+                <a href="index.html">
+                    <h3>Начало</h3>
+                </a>
+                <a href="Products.html">
+                    <h3>Продукти</h3>
+                </a>
+                <div class="dropdown">
+                    <h3 onclick="toggleDropdown()" class="ddm_h3">Категории <i class='bx bx-chevron-down'></i>
+                    </h3>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="#">Телефони</a>
+                        <a href="#">Компютри и периферия</a>
+                        <a href="#">Камери</a>
+                        <a href="#">Хладилници</a>
+                        <a href="#">Климатици</a>
+                    </div>
+                </div>
+                <a href="about_us.html">
+                    <h3>За нас</h3>
+                </a>
+            </div>
+            <!--Cart Icon-->
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <!--cart-->
+            <div class="cart">
+                <h2 class="cart-title">Твоята кошница</h2>
+                <!--Content-->
+                <div class="cart-content"></div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Обща сума</div>
+                    <div class="total-price">0лв</div>
+                </div>
+                <!--Buy Button-->
+                <button type="button" class="btn-buy">Плати сега</button>
+                <!--Close Cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- home content -->
+    <section class="home">
+        <div class="content">
+            <h1> <span>Електрически Продукти</span>
+                <br>
+                До <span id="span2">50%</span> намаление
+            </h1>
+            <p>Само сега най-добрите оферти на пазара.
+                <br>При всеки закупен продукт ще получиш код с отстъпка при следващо закупуване.
+            </p>
+            <div class="btn"><button>Пазарувай</button></div>
+
+        </div>
+        <div class="img">
+            <img src="./imgs/background.png" alt="">
+        </div>
+    </section>
+    <!-- home content -->
+
+    <!-- Products -->
+    <section class="shop container">
+        <h2 class="section-title">Перални с горно зареждане</h2>
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <!-- Box 1 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9cK0mIMKR7chwOxQESQfXSHAnGF9QMt7tWyvMDL-U8DDTm4_p3PH1NGvTU22ItkzoLMWKMHU7YMo3qHlrugMR0a2S99jclszVvd-wdaSVVTHDzPKzS13clzs8PIerv9-HDNDR2SYBdrecln-yhglPl0lcmLYD01dHVng1Qm7VUkYJ9hJhQW4ECpVADxw/s1600/1.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕРАЛНЯ INDESIT BTW L50300 EU/N 5.0 kg, 1000 об/min</h2>
+                <span class="price">450лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 2 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiv3BZ44IboeoDcwAFrJYV5ejUS5m8AUsII1oBSJHKHOY0pWTiBVrI8dEHqEoSAanpN2XtG-I-O8xfEyh7FZSPJlZeh09AWD8CbOoAU9lkpXwklcPYHDNF6WOJub-pA02Y5rwY3Gw3xA-bgYQIzSP9FRPLpBXoUwdqVWwzLpiXRqE27DUYt-9O4VlEatQ/s1600/2.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕР.WHIRLPOOL TDLR 6040L EU/N 6.0 kg, 1000 об/min</h2>
+                <span class="old-price">480лв</span><br>
+                <span class="new-price">240лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 3 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5C-KK0cSMTvKzjtK8SOyMn-ZXP84SuZv0Hdry-T-zwI5ZurUNJryONztyGdbCbmv7vrZ_cy7Pg__payb1aNvfim_LSBWH6SNcdMjgQ7h4uoeXQXCHzOI-ZLWajSHpHmI9bK15y8jFAROwQHTis8hC1unFqbLNI0wM17t9NKDGqZVNRz-qCFe7nwx4zRA/s1600/3.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕР.WHIRLPOOL TDLR 6040S EU/N 6.0 kg, 1000 об/min</h2>
+                <span class="price">500лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 4 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDbPpCMfPLubr8i1fBFuyqI1n_A8RxeB0mtXqvGUNLA_5glskR_ANcQ0-Y9ruTJE4m4Z6ennSRNLxNFlLjeXp5jniULFTvABCy74tvNpj0srAK1opmlltVT-D2_7Syx2hxwzBd_75EdcQanPPxmeqg7eqRSQr1jGKDQtgd4jdNKR-7-68xcejXKua0Cfo/s1600/4.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕРАЛНЯ INDESIT BTW B7220P EU/N 7.0 kg, 1200 об/min</h2>
+                <span class="price">550лв</span>
+            </div>
+            <!-- Box 5 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirndkbYeHtWQENuYBxEpCdovYN4KlEPqaJYkKdQnF17Hj-9VmVU5bmvsgDocDVOtU6wLe8MOtmPUDg_i6PccO3aoYhj8FE7FT8xB8wnv_U1OfnavSbAbCu6CQFSX0cwRCV0Pv3f0a1trs9rkwguNIzyCMyhhoLRR1pUAlcUW-ZPcvJGZabu3CUeabfcsQ/s1600/5.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕР.WHIRLPOOL TDLR 7220SS EU/N 7.0 kg, 1200 об/min</h2>
+                <span class="price">575лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 6 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKOWgNf4sEFzAAbipbbo9YfLtcDAHdISReIqV5I0m0TSsBK3CupD_iVpz47KqrgWFCO1z59XsNxnA_8duwWBpSX7jWw9eoeXkQyCBlzhLhg7Py8rrzNo9zpnHWBM_7e0JxctMHkzC5drsDfGrBxTt_Zk0Ns5Cao3R4OKqc2bF-K6p1YBLd5FX3e1mQWIQ/s1600/6.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕРАЛНЯ CANDY CSTG 282 D2/1-S 8.0 kg, 1200 об/min</h2>
+                <span class="old-price">600лв</span><br>
+                <span class="new-price">520лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 7 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgay_8Q2WedP-Y3ezLTKFLKEuhUHmSSg0ESxCpnvWM3fAocWzMtKAi5PjiDoQgWD7nojIrlhWGalbctC5RPwwUBM2Y6DSo0wMNbIpSh5G0SFxrkYXdvbnttJrTZlOEqAyRi7XbA87vzwLrFFzN5bbFkTLtobDGQ32gfbliUFM9zT5BYaeuM6_Cq0K49F_E/s1600/7.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕРАЛНЯ ELECTROLUX EW6TN3272 7.0 kg, 1200 об/min</h2>
+                <span class="price">650лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 8 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOX6ttSDrAq9bPxHwfeny7gsyJdHngZhgc09nRihSw8m831CompoiN4BkLD7jjvCuhO47aeB1ryntug7RjJMw0eTrqEjpN63AkjYY2TL21KHOY0CmdrU1vACo_7pb3fLf8arm2_d6cLpooe6dbFTJpjRnpM2q3arGf8W8AII2DJXpW0Br5epFuo1YsOEE/s1600/8.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕРАЛНЯ AEG LTR6G261E 6.0 kg, 1200 об/min</h2><br>
+                <span class="price">675лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 9 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLuVTrGmd-HW09mKIDGD9PeL13WjRupPjpnw6a3vY4OV5DsGAkUIKG4luE9mf85hyphenhyphenaxNIvC67KrN48ZvJ_oGLJXCiAI40-9j0jrTnOeEHEBddBacosrpYSXT8akskV47ZjR06JjVH5p9oUh-4-aHv-llCRYx4zWEeBlf-SZH1_prfiQRL5i65X5uKumrM/s1600/9.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕР.WHIRLPOOL TDLRBX 6252BS EU 6.0 kg, 1200 об/min</h2>
+                <span class="price">700лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 10 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivjyQVMkhyphenhyphenzXHxxRBGngDstOoRXiJcOX1_0gZAqMO2ZznxTTVYgyYdEQ0oTz6Cz5vuUz7nNV_7c9Kv_yS_GBhZbCbkmsngwvxg68seyfIHM17o1-LmEJ_-8GplH3bKlRr4gzy1BzSN23HeJTWsbj77Mos20S0JSbu5iBOix97l3Q0KArcSe4SbXAWFHL0/s1600/10.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕРАЛНЯ AEG LTR6G271E 7.0 kg, 1200 об/min</h2>
+                <span class="old-price">750лв</span><br>
+                <span class="new-price">225лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <!-- Box 11 -->
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGNUqWTfq4LZwtRCk4ZIEqpAfm6pwlv9pmAWCprdiU3YtPU3v2lZewHl6fEmHKuFQktu6TCDKVcdghaT6EdjCyTVNxTQTW_ePM8f3G4DbYR0s-UgPEDluAeoVOlozQ_qNhHDwmh7n9x10bCLqrYIWK2T_X6oa5c81KIUA4NrjaZ7f__qtNJbVy0gpURbk/s1600/11.jpg"
+                    alt="" class="product-img" />
+                <h2 class="product-title">ПЕРАЛНЯ AEG LTR7E373E 7.0 kg, 1300 об/min</h2><br>
+                <span class="price">775лв</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+    </section>
+
+    <!-- Offer Section -->
+    <div class="container" id="offer">
+        <div class="row">
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Безплатна доставка</h3>
+                <p>На поръчки над 300 лв</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>Безплатно връщане</h3>
+                <p>В период от 30 дни</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-truck"></i>
+                <h3>Бързи доставки</h3>
+                <p>По целия свят</p>
+            </div>
+            <div class="col-md-3 py-3 py-md-0">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <h3>Голям набор</h3>
+                <p>От продукти</p>
+            </div>
+        </div>
+    </div>
+    <!-- Offer Section -->
+
+    <!-- Newsletter Section -->
+    <div class="container" id="newslater">
+        <h3 class="text-center">Абонирайте се за нашите специални оферти.</h3>
+        <div class="input text-center">
+            <input type="text" id="emailInput" placeholder="Enter Your Email...">
+            <button id="subscribe">Абониране</button>
+        </div>
+    </div>
+    <!-- Newsletter Section -->
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Електрическо Удобство</h3>
+                        <p>
+                            гр. Пловдив <br>
+                            бул. Санкт Петербур <br>
+                            България <br>
+                        </p>
+                        <strong>Phone:</strong> 076/ 686 220 <br>
+                        <strong>Email:</strong> electroniccomfort@gmail.com <br>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Usefull Links</h4>
+                        <ul>
+                            <li><a href="index.html">Начало</a></li>
+                            <li><a href="about_us.html">За нас</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="Terms of service.html">Terms of service</a></li>
+                            <li><a href="Privacy policy.html">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Нашите социални мрежи</h4>
+                        <p>Може да ни последвате в социалните ни мрежи за допълнителни събития.</p>
+                        <div class="social-links mt-3"> <!-- Fixed class name -->
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Електрическо Удобство</span></strong>. Всички права са запазени
+            </div>
+            <div class="credits">
+                Designed by <a href="about_me.html">Ivan Dzhadzhev</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section -->
+
+
+    <script src="js/drop-down_menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/subscribe.js"></script>
+</body>
+
+</html>
